@@ -1,0 +1,22 @@
+{
+  "name": "outofthetimbers",
+  "version": "1.0.0",
+  "description": "Website for outofthetimbers.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enterloper/outofthetimbers.git"
+  },
+  "author": "Richard Boothe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enterloper/outofthetimbers/issues"
+  },
+  "homepage": "https://github.com/enterloper/outofthetimbers#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
