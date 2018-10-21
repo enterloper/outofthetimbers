@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Out of the Timbers</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
   </head>
   <body>
     <noscript>
@@ -14,5 +15,6 @@
       </section>
     </noscript>
     <div id="root"></div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>
