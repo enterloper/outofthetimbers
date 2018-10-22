@@ -5,25 +5,25 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: { main: './src/index.jsx' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js?x$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.scss$/,
-        use: [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
-      }
-    ]
+        use: [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin('dist', {}),
@@ -34,8 +34,8 @@ module.exports = {
       inject: false,
       hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
-    new WebpackMd5Hash()
-  ]
+    new WebpackMd5Hash(),
+  ],
 };
