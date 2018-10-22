@@ -22,8 +22,7 @@ app.use(morgan('dev'));
   //
   // });
   app.use('/', (req, res) => {
-    console.log(path.resolve(__dirname, 'client', 'index.html'));
-    res.sendFile(path.resolve(__dirname, 'client', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../', 'client', 'dist', 'index.html'));
   });
 // }
 
