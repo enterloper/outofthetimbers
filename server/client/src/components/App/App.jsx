@@ -1,13 +1,11 @@
 import React from 'react';
-import Landing from '../../layouts/Sidebar';
-import SidebarLayout from '../../layouts/Sidebar/SidebarLayout';
+import Landing from '../Landing';
+import FloatingSideMenu from '../../layouts/FloatingSideMenu';
 
-export default function App() {
-  return (
-    <div>
-      <SidebarLayout>
-        <Landing />
-      </SidebarLayout>
-    </div>
-  );
-};
+const App = () => (
+  <FloatingSideMenu>
+    <Landing />
+  </FloatingSideMenu>
+);
+
+export default App;
