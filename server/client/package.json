@@ -27,14 +27,15 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2",
     "webpack-md5-hash": "0.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
-    "dev": "webpack-dev-server --mode=development --open --watch"
+    "build": "webpack --env.production --optimize-minimize",
+    "dev": "webpack-dev-server --env.development --color --open --verbose --watch"
   },
   "author": "Richard Boothe",
   "license": "MIT"

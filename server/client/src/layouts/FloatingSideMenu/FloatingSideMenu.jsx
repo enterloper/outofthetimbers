@@ -1,8 +1,9 @@
 import React from 'react';
+import './styles.scss';
 
 const FloatingSideMenu = ({ children }) => {
   return (
-    <div>
+    <div className="test">
       { children }
     </div>
   );
