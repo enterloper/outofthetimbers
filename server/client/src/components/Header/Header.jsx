@@ -46,7 +46,13 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <nav className="header-nav">
+        <div>
+          <h1>
+            Out of the Timbers
+            {/* REMOVE THIS PROBABLY */}
+          </h1>
+        </div>
+        <nav>
           {this.renderNavigation()}
         </nav>
       </header>
