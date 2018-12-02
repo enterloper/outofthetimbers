@@ -3,7 +3,7 @@ import './styles.scss';
 
 const FloatingSideMenu = ({ children }) => {
   return (
-    <div className="test">
+    <div className="side-menu-wrapper">
       { children }
     </div>
   );

@@ -1,3 +1,4 @@
-div {
-  color: red;
-}
+@import './colors.scss';
+
+$text-font-stack: 'Avenir Next', 'Helvetica Neue', sans-serif;
+
