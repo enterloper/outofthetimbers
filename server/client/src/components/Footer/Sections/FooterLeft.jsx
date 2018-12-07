@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FooterLeft = () => (
-  <div className="footer-section">
+  <div className="footer-wrapper-section">
     left
   </div>
 );

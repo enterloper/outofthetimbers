@@ -1,15 +1,31 @@
 @import '../../styles/colors';
 @import '../../styles/animations';
-@import '../../styles/fonts.scss';
+@import '../../styles/fonts';
+@import '../../styles/layouts';
 
 .footer {
-  display: flex;
-  &-section {
+  &-title {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 33.333333%;
+    font-size: 20px;
+    &-line {
+      border-top: 1px solid black;
+      height: 40%;
+      width: 90%;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    &-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 33.333333%;
+    }
+  }
+
+  &-justify-align {
+    @extend %justify-align;
   }
 }
 

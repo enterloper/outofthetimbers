@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FooterCenter = () => (
-  <div className="footer-section">
+  <div className="footer-wrapper-section">
     center
   </div>
 );

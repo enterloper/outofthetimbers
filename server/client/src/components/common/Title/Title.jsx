@@ -13,7 +13,8 @@ const defaultProps = {
 const Title = ({ fontSize }) => {
   return (
     <span
-      className={`title ${fontSize ? `title-${fontSize}` : 'title-default'}`}>
+      className={`title ${fontSize ? `title-${fontSize}` : 'title-default'}`}
+    >
       Out of the Timbers
     </span>
   );

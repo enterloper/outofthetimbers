@@ -1,12 +1,20 @@
 import React from 'react';
-import { FooterLeft, FooterCenter, FooterRight } from './Sections';
+import {
+  FooterTitle,
+  FooterLeft,
+  FooterCenter,
+  FooterRight,
+} from './Sections';
 import './styles.scss';
 
 const Footer = () => (
   <div className="footer">
-    <FooterLeft />
-    <FooterCenter />
-    <FooterRight />
+    <FooterTitle />
+    <div className="footer-wrapper">
+      <FooterLeft />
+      <FooterCenter />
+      <FooterRight />
+    </div>
   </div>
 );
 

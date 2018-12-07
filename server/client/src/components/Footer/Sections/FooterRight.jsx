@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FooterRight = () => (
-  <div className="footer-section">
+  <div className="footer-wrapper-section footer-align">
     right
   </div>
 );
