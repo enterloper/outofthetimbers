@@ -6,11 +6,11 @@
 .footer {
   &-title {
     display: flex;
-    font-size: 20px;
+    margin-bottom: 2rem;
     &-line {
       border-top: 1px solid black;
-      height: 40%;
-      width: 90%;
+      height: 50%;
+      width: 80%;
     }
   }
 
