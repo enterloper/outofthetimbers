@@ -1,12 +1,13 @@
 import React from 'react';
-import FloatingSideMenu from '../../layouts/FloatingSideMenu';
+import Vanilla3Tier from '../../layouts/Vanilla3Tier';
+import './styles.scss';
 
 const Landing = () => (
-  <FloatingSideMenu>
-    <div>
+  <Vanilla3Tier>
+    <div className="landing">
       <h1>Home</h1>
     </div>
-  </FloatingSideMenu>
+  </Vanilla3Tier>
 );
 
 export default Landing;

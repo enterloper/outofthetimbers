@@ -1,1 +1,46 @@
-$text-font-stack: 'Avenir Next', 'Helvetica Neue', sans-serif;
+@import './colors.scss';
+@import './animations.scss';
+
+@keyframes dance {
+  from {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  to {
+    margin-top: 10%;
+    width: 100%;
+  }
+}
+
+%anchor {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: $oftt-bark;
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    color: $oftt-bark;
+  }
+  &:hover {
+    transition: color .2s;
+    color: $oftt-green;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+}
+
+%link-font {
+  font-family: 'Trirong', 'Roboto Slab', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+%text-font {
+  font-family: 'Roboto Slab', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+%title-font {
+  font-family: 'Eczar', 'Trirong', 'Roboto Slab', 'Helvetica Neue', sans-serif;
+  letter-spacing: .2rem;
+}

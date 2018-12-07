@@ -9,7 +9,6 @@ const Store = () => <h2>Store</h2>;
 const App = () => (
   <Router>
     <div>
-      <Header />
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/about" component={About} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Title from '../common/Title';
 import './styles.scss';
 
 class Header extends React.Component {
@@ -29,9 +30,8 @@ class Header extends React.Component {
     return (
       <ul>
         {navArray.map(({title, route}) => (
-          <li>
+          <li key={title}>
             <Link
-              key={title}
               to={route}
               className="header-nav-item"
             >
@@ -46,12 +46,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <div>
-          <h1>
-            Out of the Timbers
-            {/* REMOVE THIS PROBABLY */}
-          </h1>
-        </div>
+        <Title fontSize="small" />
         <nav>
           {this.renderNavigation()}
         </nav>
