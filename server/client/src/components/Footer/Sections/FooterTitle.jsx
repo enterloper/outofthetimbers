@@ -11,7 +11,7 @@ const FooterTitle = () => (
   <div className="footer-title">
     <LineSection />
     <div className="footer-wrapper-section">
-      <Title />
+      <Title fontSize="medium" />
     </div>
     <LineSection />
   </div>

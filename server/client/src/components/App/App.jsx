@@ -1,10 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Landing from '../Landing';
-import Header from '../Header/Header';
-
-const About = () => <h2>About</h2>;
-const Store = () => <h2>Store</h2>;
+import Landing from '../../pages/Landing';
+import StoreFront from '../../pages/StoreFront';
+import About from '../../pages/About';
 
 const App = () => (
   <Router>
@@ -12,7 +10,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/about" component={About} />
-        <Route path="/store" component={Store} />
+        <Route path="/store" component={StoreFront} />
       </Switch>
     </div>
   </Router>

@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  fontSize: null,
+  fontSize: 'default',
 };
 
 const Title = ({ fontSize }) => {
