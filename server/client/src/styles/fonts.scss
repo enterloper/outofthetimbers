@@ -18,7 +18,13 @@
     color: $oftt-green;
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
-    }
+  }
+  &:focus {
+    transition: color .4s;
+    color: $oftt-green;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+  }
 }
 
 %link-font {

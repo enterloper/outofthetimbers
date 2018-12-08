@@ -8,14 +8,20 @@ class Input extends Component {
 
   static propTypes = {
     onHandleChange: PropTypes.func.isRequired,
+    onHandleFocus: PropTypes.func,
+  };
+
+  static defaultProps = {
+    onHandleFocus: (e) => (console.log(e.target.value)),
   };
 
   render() {
-    const { onHandleChange } = this.props;
+    const { onHandleChange, onHandleFocus } = this.props;
     return (
       <div className="input-wrapper">
         <input
           onChange={onHandleChange}
+          onFocus={onHandleFocus}
         />
       </div>
     );
