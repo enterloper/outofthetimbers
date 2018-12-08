@@ -1,23 +1,12 @@
 @import './colors.scss';
 @import './animations.scss';
 
-@keyframes dance {
-  from {
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  to {
-    margin-top: 10%;
-    width: 100%;
-  }
-}
-
 %anchor {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
   color: $oftt-bark;
+  transition: color .7s;
   &:link {
     text-decoration: none;
   }
@@ -25,7 +14,7 @@
     color: $oftt-bark;
   }
   &:hover {
-    transition: color .2s;
+    transition: color .4s;
     color: $oftt-green;
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
@@ -43,4 +32,8 @@
 %title-font {
   font-family: 'Pacifico', 'Trirong', 'Roboto', 'Helvetica Neue', sans-serif;
   letter-spacing: .2rem;
+}
+
+%footer-font-size {
+  font-size: 1.6rem;
 }

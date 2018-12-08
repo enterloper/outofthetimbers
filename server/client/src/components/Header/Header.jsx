@@ -29,7 +29,7 @@ class Header extends React.Component {
     const navArray = this.navigationConfig; // should filter here for Admin access.
     return (
       <ul>
-        {navArray.map(({title, route}) => (
+        {navArray.map(({ title, route }) => (
           <li key={title}>
             <Link
               to={route}
