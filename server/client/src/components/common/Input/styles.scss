@@ -1,0 +1,21 @@
+.input {
+  &-label {
+    position: absolute;
+    padding-left: 1.2rem;
+    padding-top: 1rem;
+    z-index: 100;
+    color: green;
+    font-size: 24px;
+    &-focused {
+      font-size: 1.2rem;
+      padding-top: 0;
+    }
+  }
+
+  &-input {
+    &-default {
+      height: 4rem;
+      width: 20rem;
+    }
+  }
+}

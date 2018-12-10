@@ -1,31 +1,69 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './styles.scss';
 
 class Input extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      focus: false,
+      inputValue: '',
+    };
   }
 
-  static propTypes = {
-    onHandleChange: PropTypes.func.isRequired,
-    onHandleFocus: PropTypes.func,
+  onHandleFocus = () => {
+    this.setState(() => ({focus: true}));
+  }
+
+  onHandleBlur = () => {
+    this.setState(() => ({focus: false}));
+  }
+
+  onHandleChange = (event) => {
+    const {value: inputValue} = event.target;
+    this.setState(() => ({inputValue}))
   };
 
-  static defaultProps = {
-    onHandleFocus: (e) => (console.log(e.target.value)),
-  };
+  renderLabel = label => {
+    const {size} = this.props;
+    const {focus} = this.state;
+
+    return (
+      label ?
+        <label
+          className={`input-label ${focus ? 'input-label-focused' : ''} input-label-${size}`}
+        >
+          {label}
+        </label>
+        : null
+    );
+  }
 
   render() {
-    const { onHandleChange, onHandleFocus } = this.props;
+    const {label, name} = this.props;
     return (
       <div className="input-wrapper">
+        {this.renderLabel(label)}
         <input
-          onChange={onHandleChange}
-          onFocus={onHandleFocus}
+          className={`input-input  input-input-${this.props.size}`}
+          name={name}
+          type="input"
+          onChange={this.onHandleChange}
+          onFocus={this.onHandleFocus}
+          onBlur={this.onHandleBlur}
         />
       </div>
     );
   }
 }
+
+Input.propTypes = {
+  size: PropTypes.string,
+};
+
+Input.defaultProps = {
+    size: 'default',
+};
 
 export default Input;

@@ -1,20 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Input from '../Input';
 
-const SubscribeBlock = (props) => {
-  const { onHandleChange } = props;
+const SubscribeBlock = () => {
   return (
     <div>
       <Input
-        onHandleChange={onHandleChange}
+        label="test"
       />
     </div>
   );
-};
-
-SubscribeBlock.propTypes = {
-  onHandleChange: PropTypes.func.isRequired,
 };
 
 export default SubscribeBlock;
