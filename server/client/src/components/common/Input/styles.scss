@@ -13,6 +13,7 @@
     &-focused {
       font-size: 1.2rem;
       padding-top: 0.2rem;
+      outline: none;
       transition: padding-top .4s, font-size .3s;
     }
   }
@@ -22,7 +23,8 @@
     border: 2px solid $oftt-green;
     border-radius: 4px;
     font-size: 2rem;
-    color: transparentize(black, .1);
+    color: transparent;
+    text-shadow: 0 0 0 $oftt-green;
 
     &-default {
       height: 4rem;

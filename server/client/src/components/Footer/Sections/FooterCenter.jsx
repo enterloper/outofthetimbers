@@ -35,8 +35,8 @@ const copyrightConfig = [
     text: 'www.weeknightdangero.us',
   },
 ];
-const renderIconsList = iconConfig => iconConfig.map(({ icon, description }) => (
-  <IconButton image={icon} description={description} />
+const renderIconsList = config => config.map(({ icon, description }) => (
+  <IconButton key={description} image={icon} description={description} />
 ));
 
 const renderCopyRightItem = ({ name, text }) => (

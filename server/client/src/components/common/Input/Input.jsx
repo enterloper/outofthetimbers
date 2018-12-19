@@ -53,7 +53,7 @@ class Input extends Component {
         <input
           className={`input-input  input-input-${this.props.size}`}
           name={name}
-          type="input"
+          type="text"
           onChange={this.onHandleChange}
           onFocus={this.onHandleFocus}
           onBlur={this.onHandleBlur}
