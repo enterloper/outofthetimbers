@@ -13,32 +13,37 @@ class Input extends Component {
   }
 
   onHandleFocus = () => {
-    this.setState(() => ({focus: true}));
-  }
+    this.setState(() => ({ focus: true }));
+  };
 
   onHandleBlur = () => {
-    this.setState(() => ({focus: false}));
-  }
+    this.setState(({ inputValue }) => ({
+      focus: inputValue.length > 0,
+    }));
+  };
 
   onHandleChange = (event) => {
     const {value: inputValue} = event.target;
-    this.setState(() => ({inputValue}))
+    this.setState(() => ({
+      inputValue,
+      focus: inputValue.length > 0,
+    }));
   };
 
   renderLabel = label => {
-    const {size} = this.props;
-    const {focus} = this.state;
-
+    const { size } = this.props;
+    const { focus } = this.state;
+    const focusedWithValue = focus ? 'input-label-focused' : '';
     return (
       label ?
         <label
-          className={`input-label ${focus ? 'input-label-focused' : ''} input-label-${size}`}
+          className={`input-label ${focusedWithValue} input-label-${size}`}
         >
           {label}
         </label>
         : null
     );
-  }
+  };
 
   render() {
     const {label, name} = this.props;

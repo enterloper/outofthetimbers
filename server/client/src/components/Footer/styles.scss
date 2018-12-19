@@ -63,8 +63,12 @@
     }
 
     &-social {
-      background: peachpuff;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6rem;
+      width: 100%;
+      margin: 2.4rem;
     }
 
     &-subscribe {

@@ -1,6 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SubscribeBlock from '../../common/SubscribeBlock/SubscribeBlock';
+import SubscribeBlock from '../../common/SubscribeBlock';
+import IconButton from '../../common/IconButton';
+import twitterIcon from '../../../../assets/twitter.svg';
+import pinterestIcon from '../../../../assets/pinterest.svg';
+import instagramIcon from '../../../../assets/instagram.png';
+
+const iconConfig = [
+  {
+    icon: pinterestIcon,
+    description: 'Pinterest icon linking to the Out of the Timbers Pinterest account',
+  },
+  {
+    icon: twitterIcon,
+    description: 'Twitter icon linking to the Out of the Timbers Twitter account',
+  },
+  {
+    icon: instagramIcon,
+    description: 'Instagram icon linking to the Out of the Timbers Instagram account',
+  },
+];
 
 const copyrightConfig = [
   {
@@ -16,6 +35,9 @@ const copyrightConfig = [
     text: 'www.weeknightdangero.us',
   },
 ];
+const renderIconsList = iconConfig => iconConfig.map(({ icon, description }) => (
+  <IconButton image={icon} description={description} />
+));
 
 const renderCopyRightItem = ({ name, text }) => (
   <li key={name}>
@@ -36,9 +58,7 @@ const renderCopyrightList = config => <ul>{config.map(renderCopyRightItem)}</ul>
 const FooterCenter = () => (
   <div className="footer-wrapper-section footer-center">
     <div className="footer-center-social">
-      <span>i</span>
-      <span>o</span>
-      <span>u</span>
+      {renderIconsList(iconConfig)}
     </div>
     <div className="footer-center-subscribe">
       <SubscribeBlock />

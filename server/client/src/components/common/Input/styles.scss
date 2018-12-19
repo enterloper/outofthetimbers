@@ -1,18 +1,29 @@
+@import '../../../styles/colors';
+
 .input {
   &-label {
     position: absolute;
     padding-left: 1.2rem;
     padding-top: 1rem;
     z-index: 100;
-    color: green;
-    font-size: 24px;
+    color: transparentize(black, .6);;
+    font-size: 2rem;
+    transition: padding-top .4s, font-size .3s;
+
     &-focused {
       font-size: 1.2rem;
-      padding-top: 0;
+      padding-top: 0.2rem;
+      transition: padding-top .4s, font-size .3s;
     }
   }
 
   &-input {
+    padding-left: 1.2rem;
+    border: 2px solid $oftt-green;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: transparentize(black, .1);
+
     &-default {
       height: 4rem;
       width: 20rem;

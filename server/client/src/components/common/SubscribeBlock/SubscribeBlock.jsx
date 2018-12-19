@@ -5,8 +5,13 @@ const SubscribeBlock = () => {
   return (
     <div>
       <Input
-        label="test"
+        label="email"
       />
+      <button
+        type="button"
+      >
+        signup!
+      </button>
     </div>
   );
 };
