@@ -5,7 +5,7 @@
     <title>Out of the Timbers</title>
     <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Trirong:400,900"
+        href="https://fonts.googleapis.com/css?family=Pacifico |Roboto|Trirong:400,900"
     >
     <link
         rel="stylesheet"
@@ -14,14 +14,16 @@
   </head>
   <body>
     <noscript>
-      <section>
-        <div>
-          <h1>Out of the Timbers</h1>
-          <p>Welcome to Out of the Timbers, the home of finely crafted works.</p>
+      <div id="no-script-wrapper">
+        <div id="no-script-splash-page-wrapper">
+          <div id="no-script-main-title">
+            <h1>Out of the Timbers</h1>
+            <p>Welcome to Out of the Timbers, the home of finely crafted works.</p>
+          </div>
         </div>
-      </section>
+      </div>
     </noscript>
-    <div id="app"></div>
+    <div id="app" />
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>
