@@ -20,16 +20,40 @@ body {
 }
 
 #no-script-splash-page-wrapper {
-  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #no-script-main-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto';
-  //background: pink;
+}
+
+#no-script-main-title-wrapper {
+  width: 60rem;
+  margin-top: 9rem;
+  text-align: center;
+  background: rgba(0,0,0,.3);
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
   > h1 {
-    font-size: 10rem;
+    margin: 0;
+    font-size: 12rem;
+    color: white;
+    font-family: 'BurfordOutline', 'Roboto', sans-serif;
+    line-height: 1;
   }
+}
+
+#no-script-border-placement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.no-script-border-affect {
+  border-bottom: 3px solid black;
+  width: 10rem;
 }

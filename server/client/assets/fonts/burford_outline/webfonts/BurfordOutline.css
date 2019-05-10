@@ -1,0 +1,12 @@
+/* Webfont: BurfordOutline */@font-face {
+    font-family: 'BurfordOutline';
+    src: url('BurfordOutline.eot'); /* IE9 Compat Modes */
+    src: url('BurfordOutline.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BurfordOutline.woff') format('woff'), /* Modern Browsers */
+         url('BurfordOutline.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('BurfordOutline.svg#BurfordOutline') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
