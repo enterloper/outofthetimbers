@@ -19,7 +19,7 @@ module.exports = (env, argv) => ({
   },
   devtool: env.production ? 'eval' : 'source-map',
   entry: {
-    main: './src/index.jsx',
+    main: './src/Footer.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
