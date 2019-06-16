@@ -19,6 +19,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 #no-script-wrapper {
   background: url(../../../../../outofthetimbers-content/home_banner.jpg) no-repeat center center fixed;
 ;
@@ -48,14 +49,15 @@ body {
   width: 60rem;
   margin-top: 15rem;
   text-align: center;
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-right: 3px solid white;
+  border-top: 3px solid $oftt-white;
+  border-left: 3px solid $oftt-white;
+  border-right: 3px solid $oftt-white;
+  border-radius: 3px;
   > h1 {
     margin: .8rem 0 3.2rem;
     font-size: 12rem;
     font-weight: 400;
-    color: white;
+    color: $oftt-white;
     font-family: 'Burford', 'Abril Fatface', sans-serif;
     line-height: 1;
   }
@@ -67,7 +69,7 @@ body {
     margin: 0;
     font-size: 12rem;
     font-weight: 400;
-    color: white;
+    color: $oftt-white;
     font-family: 'Burford', 'Abril Fatface', sans-serif;
     line-height: 1;
   }
@@ -78,7 +80,30 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .no-script-border-affect {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid $oftt-white;
   width: 8rem;
+}
+
+#no-script-js-disclaimer {
+  margin-top: 5rem;
+  background: rgba(5, 5, 5, 0.8);
+  padding: 2rem;
+  width: 56rem;
+  border: 3px solid $oftt-white;
+  border-radius: 4px;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  color: $oftt-white;
+  > p {
+    line-height: 1.5;
+  }
+}
+
+#no-script-anchor {
+  > a {
+    display: inline;
+    @extend %anchor;
+
+  }
 }

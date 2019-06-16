@@ -2,27 +2,22 @@
 
 %anchor {
   display: block;
-  padding: 6px 12px;
   text-decoration: none;
-  color: $oftt-bark;
+  color: $oftt-green;
   transition: color .7s;
   &:link {
     text-decoration: none;
   }
   &:visited {
-    color: $oftt-bark;
+    color: $oftt-lime-green;
   }
   &:hover {
     transition: color .4s;
-    color: $oftt-green;
-    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-    animation: heartbeat 1.5s ease-in-out infinite both;
+    color: $oftt-lime-green;
   }
   &:focus {
     transition: color .4s;
-    color: $oftt-green;
-    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-    animation: heartbeat 1.5s ease-in-out infinite both;
+    color: $oftt-lime-green;
   }
 }
 
