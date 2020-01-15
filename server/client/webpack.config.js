@@ -7,23 +7,15 @@ const UglyifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, argv) => ({
   mode: env.production ? 'production' : 'development',
-  devServer: {
-    // https: true,
-    // index: 'index.html',
-    // port: 8080,
-    // proxy: {
-    //   context: ['/auth', '/api'],
-    //   target: 'http://localhost:4040', // 'https://localhost:4040',
-    // },
-    // publicPath: '/assets', // sets bundle to http:localhost:4040/assets/bundle.js
-  },
   devtool: env.production ? 'eval' : 'source-map',
-  entry: {
-    main: './src/index.jsx',
+  devServer: {
+    historyApiFallback: true,
   },
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -33,10 +25,6 @@ module.exports = (env, argv) => ({
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.css$/,
@@ -56,10 +44,7 @@ module.exports = (env, argv) => ({
       filename: 'style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
       template: './src/index.html',
-      filename: 'index.html',
     }),
     new WebpackMd5Hash(),
   ],
@@ -68,8 +53,10 @@ module.exports = (env, argv) => ({
   },
   resolve: {
     alias: {
+      assets: path.resolve(__dirname, 'assets'),
       components: path.resolve(__dirname, 'src/components/'),
-      layouts: path.resolve(__dirname, 'src/layouts'),
+      pages: path.resolve(__dirname, 'src/pages'),
+      styles: path.resolve(__dirname, 'src/styles'),
     },
     extensions: ['.js', '.jsx', '.json'],
   },
