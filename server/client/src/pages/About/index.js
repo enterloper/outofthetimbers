@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavigationMenu from 'components/NavigationMenu';
+
 const Wrapper = styled.div`
   padding: 24px;
   background-color: #EFF8E2;

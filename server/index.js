@@ -11,8 +11,12 @@ const PORT = (app.get('port'));
 app.use(morgan('dev'));
 
 const path = require('path');
-app.use('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../', 'client', 'dist', 'index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(JSON.stringify(path.join(__dirname, './client/dist/index.html'), (error) => {
+    if(error) {
+      res.status(500).send(error);
+    }
+  }));
 });
 
 app.listen(PORT, () => console.warn(`Out of the Timbers server fired up on port: ${PORT}`));
