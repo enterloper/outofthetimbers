@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import NavigationMenu from 'components/NavigationMenu';
 
 const Wrapper = styled.div`
-  padding: 24px;
-  background-color: #EFF8E2;
+  padding: 104px 24px 24px;
+  background-color: #f3f3f3;
+  background-image: url('assets/images/tree_bark.png')
 `;
 
 const PageBorder = styled.div`
