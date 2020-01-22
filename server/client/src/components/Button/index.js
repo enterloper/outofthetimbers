@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import { func } from 'prop-types';
+import {
+  arrayOf,
+  func,
+  node,
+  string
+} from 'prop-types';
 import styled from 'styled-components';
 import colors from 'styles/colors';
 
 const { mustard } = colors;
+
 const StyledButton = styled.button`
     background: none;
     border: 0;
     box-sizing: border-box;
     margin: 16px;
     padding: 16px 32px;
-    box-shadow: inset 0 0 0 2px red;
-    color: red;
+    color: ${({ color }) => (color || mustard)};
     font-weight: 700;
     position: relative;
     vertical-align: middle;
@@ -38,7 +43,8 @@ const StyledButton = styled.button`
     }
 
     &:hover {
-      color: rebeccapurple;
+      color: ${({ color }) => (color || mustard)};
+    font-weight: 700;
     }
 
     &:hover::before,
@@ -48,16 +54,20 @@ const StyledButton = styled.button`
     }
 
     &:hover::before {
-      border-top-color: rebeccapurple; // Make borders visible
-      border-right-color: rebeccapurple;
+      border-top-color: ${({ color }) => (color || mustard)};
+    font-weight: 700; // Make borders visible
+      border-right-color: ${({ color }) => (color || mustard)};
+    font-weight: 700;
       transition:
         width 0.25s ease-out, // Width expands first
         height 0.25s ease-out 0.25s; // And then height
     }
 
   &:hover::after {
-    border-bottom-color: rebeccapurple; // Make borders visible
-    border-left-color: rebeccapurple;
+    border-bottom-color: ${({ color }) => (color || mustard)};
+    font-weight: 700; // Make borders visible
+    border-left-color: ${({ color }) => (color || mustard)};
+    font-weight: 700;
     transition:
       border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
       width 0.25s ease-out 0.5s, // And then exanding width
@@ -78,13 +88,13 @@ const StyledButton = styled.button`
 
 `;
 
-const Button = ({children, onClick}) => {
-  return (
-    <StyledButton onClick={onClick}>{children}</StyledButton>
-  );
-};
+const Button = ({ children, color, onClick }) => (
+  <StyledButton color={color} onClick={onClick}>{children}</StyledButton>
+);
 
 Button.propTypes = {
+  children: arrayOf(node).isRequired,
+  color: string.isRequired,
   onClick: func.isRequired,
 };
 

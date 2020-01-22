@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from 'styles/colors';
+import ChevronButton from 'components/ChevronButton';
 
-const {alabaster} = colors;
+const { alabaster } = colors;
 const JumboImage = styled.div`
     background: url(assets/images/home_banner.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -87,6 +88,7 @@ const JumboTitle = () => (
           <h1>Timbers</h1>
         </TitleDrop>
       </Title>
+      <ChevronButton />
     </FadeContainer>
   </JumboImage>
 );
