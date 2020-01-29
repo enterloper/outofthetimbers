@@ -94,7 +94,7 @@ const FeaturedWork = () => (
         <img src="assets/images/featured-secondary-bottom.jpg" alt="Maple bowl with turquoise inlay" />
       </FeaturedGallerySecondary>
     </FeaturedGallery>
-    <Button color={smokeyBlack}>
+    <Button color={smokeyBlack} onClick={() => {}}>
       SEE ALL WORK
     </Button>
   </StyledFeaturedWork>

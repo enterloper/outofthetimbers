@@ -42,8 +42,8 @@ const Summary = () => (
       <SummaryDescription>
         The care and attention to detail put into each produced peice, is a result of the respect for the individual and unique nature each tree provides.
       </SummaryDescription>
-      <Button color={smokeyBlack}>
-            LEARN MORE
+      <Button color={smokeyBlack} onClick={() => {}}>
+        LEARN MORE
       </Button>
     </SummaryContainer>
   </StyledSummary>

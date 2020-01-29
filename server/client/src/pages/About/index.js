@@ -10,6 +10,8 @@ const Wrapper = styled.div`
 
 const PageBorder = styled.div`
   border: 16px solid #0A100D;
+  max-width: 1080px;
+  margin: 0 auto;
   @media(max-width: 762px) {
     border: none;
   }
@@ -18,6 +20,7 @@ const PageBorder = styled.div`
 const TopBackground = styled.div`
   display: flex;
   background: #A4B494;
+
   @media(max-width: 762) {
     border-radius: 3px;
   }
@@ -108,35 +111,35 @@ const AboutPage = () => (
             />
           </PhotoSection>
         </TopBackground>
-        <BioContainer>
-          <ColumnWrapper>
-            <BioColumn>
-              <p>I was born in the small northern Missouri town of Jamesport, which is now a popular Amish community not far from my grandparents&apos; farm. It is from the timbers of that farm that I gather the Black Walnut, Red Oak, and Spalded Maple I shape into my wood creations.</p>
-              <p>Additionally, I gather Yellow Beech and White Oak burls from the forests of the Upper Penninsula of Michigan.</p>
-              <p>As a young boy my famliy moved to the Ponderosa Pines of Flagstaff, where, as an Eagle Scout I developed a love for the outdoors and an appreciation for nature and the splendor of the trees.</p>
-            </BioColumn>
-            <BioColumn>
-              <p>While earning my Bachelor of Arts in Education at NAU, I minored in industrial arts, where I was introduced to the wood lath and became fasinated with its ability to unlock the beauty hidden within each piece of wood.</p>
-              <p>After 38 years I retired as a public school teacher/administrator and now enjoy sharing with others the unique character and beauty of each piece of wood that comes </p>
-              <p>&apos;Out of the Timbers&apos;</p>
-            </BioColumn>
-          </ColumnWrapper>
-        </BioContainer>
-        <CollageContainer>
-          <CollageFirstRow>
-            <img
-              src="assets/images/missouriLumber.jpg" 
-              alt="Jimmy Weldon with Lumber from Weldon Farm"
-            />
-          </CollageFirstRow>
-          <CollageSecondRow>
-            <img
-              src="assets/images/missouriLumber.jpg" 
-              alt="Jimmy Weldon with Lumber from Weldon Farm"
-            />
-          </CollageSecondRow>
-        </CollageContainer>
       </PageBorder>
+      <BioContainer>
+        <ColumnWrapper>
+          <BioColumn>
+            <p>I was born in the small northern Missouri town of Jamesport, which is now a popular Amish community not far from my grandparents&apos; farm. It is from the timbers of that farm that I gather the Black Walnut, Red Oak, and Spalded Maple I shape into my wood creations.</p>
+            <p>Additionally, I gather Yellow Beech and White Oak burls from the forests of the Upper Penninsula of Michigan.</p>
+            <p>As a young boy my famliy moved to the Ponderosa Pines of Flagstaff, where, as an Eagle Scout I developed a love for the outdoors and an appreciation for nature and the splendor of the trees.</p>
+          </BioColumn>
+          <BioColumn>
+            <p>While earning my Bachelor of Arts in Education at NAU, I minored in industrial arts, where I was introduced to the wood lath and became fasinated with its ability to unlock the beauty hidden within each piece of wood.</p>
+            <p>After 38 years I retired as a public school teacher/administrator and now enjoy sharing with others the unique character and beauty of each piece of wood that comes </p>
+            <p>&apos;Out of the Timbers&apos;</p>
+          </BioColumn>
+        </ColumnWrapper>
+      </BioContainer>
+      <CollageContainer>
+        <CollageFirstRow>
+          <img
+            src="assets/images/missouriLumber.jpg" 
+            alt="Jimmy Weldon with Lumber from Weldon Farm"
+          />
+        </CollageFirstRow>
+        <CollageSecondRow>
+          <img
+            src="assets/images/missouriLumber.jpg" 
+            alt="Jimmy Weldon with Lumber from Weldon Farm"
+          />
+        </CollageSecondRow>
+      </CollageContainer>
     </Wrapper>
   </>
 );

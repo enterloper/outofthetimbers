@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import styled from 'styled-components';
 import NavigationMenu from 'components/NavigationMenu';
 import JumboTitle from 'components/JumboTitle';
@@ -16,7 +15,6 @@ const Container = styled.div`
 
 const HomePage = () => (
   <>
-    <NavigationMenu />
     <Container>
       <JumboTitle />
       <Summary />

@@ -57,6 +57,7 @@ module.exports = (env, argv) => ({
       components: path.resolve(__dirname, 'src/components/'),
       pages: path.resolve(__dirname, 'src/pages'),
       styles: path.resolve(__dirname, 'src/styles'),
+      utility: path.resolve(__dirname, 'src/utility'),
     },
     extensions: ['.js', '.jsx', '.json'],
   },

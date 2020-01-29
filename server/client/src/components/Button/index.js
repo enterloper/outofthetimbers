@@ -3,6 +3,7 @@ import {
   arrayOf,
   func,
   node,
+  oneOfType,
   string
 } from 'prop-types';
 import styled from 'styled-components';
@@ -43,7 +44,7 @@ const StyledButton = styled.button`
     }
 
     &:hover {
-      color: ${({ color }) => (color || mustard)};
+      color: ${({ color }) => color};
     font-weight: 700;
     }
 
@@ -54,9 +55,9 @@ const StyledButton = styled.button`
     }
 
     &:hover::before {
-      border-top-color: ${({ color }) => (color || mustard)};
+      border-top-color: ${({ color }) => color};
     font-weight: 700; // Make borders visible
-      border-right-color: ${({ color }) => (color || mustard)};
+      border-right-color: ${({ color }) => color};
     font-weight: 700;
       transition:
         width 0.25s ease-out, // Width expands first
@@ -93,9 +94,13 @@ const Button = ({ children, color, onClick }) => (
 );
 
 Button.propTypes = {
-  children: arrayOf(node).isRequired,
-  color: string.isRequired,
+  children: oneOfType([string, arrayOf(node)]).isRequired,
+  color: string,
   onClick: func.isRequired,
+};
+
+Button.defaultProps = {
+  color: mustard,
 };
 
 export default Button;

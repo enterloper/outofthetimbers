@@ -1,18 +1,26 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React, { useState } from 'react';
+import { Link, Location } from '@reach/router';
 import styled from 'styled-components';
+import colors from 'styles/colors';
+import useScrollPosition from 'utility/scrollPositionHook';
 
-const Header = styled.div`
+const {alabaster, laurelGreen, mustard, smokeyBlack } = colors;
+const Header = styled.header`
   width: 100%;
   min-width: 320px;
   position: fixed;
   top: 0;
   height: 80px;
   z-index: 10;
-  background: red;
+  background: ${mustard};
   box-shadow: 0 0 5px 0 rbga(0, 0, 0, 0.15);
   text-transform: uppercase;
+  transition: background 300ms ease-in-out;
+  &.isTransparent {
+    background: none;
+  }
 `;
+
 const Container = styled.div`
   position: relative;
   height: 100%;
@@ -27,16 +35,17 @@ const Container = styled.div`
 `;
 
 const Logo = styled.h1`
-  background: peru;
   font-size: 24px;
   a {
     text-decoration: none;
-    transition: color 100ms cubic-bezier(0.2, 0.3, 0.25, 0.9) 0ms;
     cursor: pointer;
-    color: yellow;
+    color: ${smokeyBlack};
+    transition: color 500ms ease-in-out;
+  }
 
-    &:hover {
-      color: black;
+  &.isTransparent {
+    > a {
+      color: ${alabaster}
     }
   }
 `;
@@ -53,27 +62,52 @@ const Navigation = styled.nav`
     align-items: center;
     margin-right: 10px;
     text-decoration: none;
-    color: rebeccapurple;
+    color: ${smokeyBlack};
     height: 100%;
-    background: black;
+    transition: color 500ms ease-in-out;
+  }
+  &.isTransparent {
+    > a {
+      color: ${alabaster}
+    }
   }
 `;
 
-const NavigationMenu = () => (
-  <Header>
-    <Container>
-      <Logo>
-        <Link to="/">
-          OUT OF THE TIMBERS
-        </Link>
-      </Logo>
-      <Navigation>
-        <Link to="store">Store</Link>
-        <Link to="about">About</Link>
-        <Link to="contact">Contact</Link>
-      </Navigation>
-    </Container>
-  </Header>
-);
+const NavigationMenu = () => {
+  const [isTransparent, setIsTransparent] = useState(true);
+
+  useScrollPosition(
+    ({ currPos }) => {
+      const shouldBeSeen = currPos.y > -100;
+
+      if (shouldBeSeen !== isTransparent) setIsTransparent(shouldBeSeen);
+    },
+    [isTransparent],
+  );
+
+  return (
+    <Location>
+      {({ location }) => {
+
+      console.log('location:', location);
+      return (
+        <Header className={isTransparent ? 'isTransparent' : ''}>
+          <Container>
+            <Logo className={isTransparent ? 'isTransparent' : ''}>
+              <Link to="/">
+                OUT OF THE TIMBERS
+              </Link>
+            </Logo>
+            <Navigation className={isTransparent ? 'isTransparent' : ''}>
+              <Link to="store">Store</Link>
+              <Link to="about">About</Link>
+              <Link to="contact">Contact</Link>
+            </Navigation>
+          </Container>
+        </Header>
+      )}}
+    </Location>
+  );
+};
 
 export default NavigationMenu;

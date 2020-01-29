@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background: red;
+  padding-top: 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const StorePage = () => (
   <Wrapper>

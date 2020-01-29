@@ -25,7 +25,6 @@ const ContactContent = styled.div`
   max-width: 60%;
   text-align: center;
   margin-bottom: 32px;
-
 `;
 
 const Established = styled.div`
@@ -57,9 +56,9 @@ const Contact = () => (
         <p>2017</p>
       </Established>
       <ContactContent>
-        <p>HERE IS SOMETHING COOL THAT MY DAD WILL TELL ME TO PUT.</p>
+        <p>Quality and craftmanship that present the beauty of each tree</p>
       </ContactContent>
-      <Button>
+      <Button onClick={() => {}}>
         GET IN TOUCH
       </Button>
     </ContactOverlay>
