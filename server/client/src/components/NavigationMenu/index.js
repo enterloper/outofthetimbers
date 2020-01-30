@@ -19,6 +19,7 @@ const Header = styled.header`
   &.isTransparent {
     background: none;
   }
+  &.
 `;
 
 const Container = styled.div`
@@ -84,28 +85,49 @@ const NavigationMenu = () => {
     },
     [isTransparent],
   );
+  const colorMap = {
+    '/store': {
+      colorScheme: 'store',
+      fontColor: smokeyBlack,
+      background: 'rebeccapurple',
+    },
+    '/about': {
+      colorScheme: 'about',
+      fontColor: smokeyBlack,
+      background: 'rebeccapurple',
+    },
+    '/contact': {
+      colorScheme: 'contact',
+      fontColor: smokeyBlack,
+      background: 'rebeccapurple',
+    },
+  };
 
   return (
     <Location>
-      {({ location }) => {
-
-      console.log('location:', location);
-      return (
-        <Header className={isTransparent ? 'isTransparent' : ''}>
-          <Container>
-            <Logo className={isTransparent ? 'isTransparent' : ''}>
-              <Link to="/">
-                OUT OF THE TIMBERS
-              </Link>
-            </Logo>
-            <Navigation className={isTransparent ? 'isTransparent' : ''}>
-              <Link to="store">Store</Link>
-              <Link to="about">About</Link>
-              <Link to="contact">Contact</Link>
-            </Navigation>
-          </Container>
-        </Header>
-      )}}
+      {({ location: { pathname } }) => {
+        let className = '';
+        if (colorMap[pathname]) {
+          className = colorMap[pathname].colorScheme;
+        }
+        console.log('CLASS:', className);
+        return (
+          <Header className={`${isTransparent ? 'isTransparent' : ''} ${className}`}>
+            <Container>
+              <Logo className={isTransparent ? 'isTransparent' : ''}>
+                <Link to="/">
+                  OUT OF THE TIMBERS
+                </Link>
+              </Logo>
+              <Navigation className={isTransparent ? 'isTransparent' : ''}>
+                <Link to="store">Store</Link>
+                <Link to="about">About</Link>
+                <Link to="contact">Contact</Link>
+              </Navigation>
+            </Container>
+          </Header>
+        );
+      }}
     </Location>
   );
 };
