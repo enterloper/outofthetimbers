@@ -8,17 +8,17 @@ body {
 
 @font-face {
   font-family: 'Burford';
-  src: url('../../assets/fonts/Burford_Outline/BurfordOutline.eot');
-  src: url('../../assets/fonts/Burford_Outline/BurfordOutline.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fonts/Burford_Outline/BurfordOutline.woff') format('woff'),
-       url('../../assets/fonts/Burford_Outline/BurfordOutline.ttf') format('truetype'),
-       url('../../assets/fonts/Burford_Outline/BurfordOutline.svg') format('svg');
+  src: url('../assets/fonts/Burford_Outline/BurfordOutline.eot');
+  src: url('../assets/fonts/Burford_Outline/BurfordOutline.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Burford_Outline/BurfordOutline.woff') format('woff'),
+       url('../assets/fonts/Burford_Outline/BurfordOutline.ttf') format('truetype'),
+       url('../assets/fonts/Burford_Outline/BurfordOutline.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 #no-script-wrapper {
-  background: url(../../assets/images/home_banner.jpg) no-repeat center center fixed;
+  background: url(../assets/images/home_banner.jpg) no-repeat center center fixed;
 ;
   -webkit-background-size: cover;
   -moz-background-size: cover;

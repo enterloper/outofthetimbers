@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import colors from 'styles/colors';
 import useScrollPosition from 'utility/scrollPositionHook';
 
-const {alabaster, laurelGreen, mustard, smokeyBlack } = colors;
+const { alabaster, mustard, smokeyBlack } = colors;
 const Header = styled.header`
   width: 100%;
   min-width: 320px;

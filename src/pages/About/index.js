@@ -99,7 +99,6 @@ const CollageSecondRow = styled.div`
 `;
 const AboutPage = () => (
   <>
-    <NavigationMenu />
     <Wrapper>
       <PageBorder>
         <TopBackground>

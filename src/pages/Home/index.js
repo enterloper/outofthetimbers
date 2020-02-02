@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavigationMenu from 'components/NavigationMenu';
 import JumboTitle from 'components/JumboTitle';
 import FeaturedWork from 'components/FeaturedWork';
 import Contact from 'components/Contact';
