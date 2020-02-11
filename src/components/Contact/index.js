@@ -5,7 +5,7 @@ import Button from 'components/Button';
 const { mustard } = colors;
 
 const ContactContainer = styled.section`
-  background: #313e48 url('assets/images/forest-reflection.jpg') no-repeat top;
+  background: #313e48 url('https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/forest-reflection.jpg') no-repeat top;
   background-size: cover;
   color: white;
   width: 100%;

@@ -87,11 +87,11 @@ const FeaturedWork = () => (
     <FeaturedTitle>FEATURED WORK</FeaturedTitle>
     <FeaturedGallery>
       <FeaturedGalleryPrimary>
-        <img src="assets/images/featured-primary.jpg" alt="A sample collection of featured peices" />
+        <img src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/featured-primary.jpg" alt="A sample collection of featured peices" />
       </FeaturedGalleryPrimary>
       <FeaturedGallerySecondary>
-        <img src="assets/images/featured-secondary-top.jpg" alt="Maple bowl with turquoise inlay" />
-        <img src="assets/images/featured-secondary-bottom.jpg" alt="Maple bowl with turquoise inlay" />
+        <img src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/featured-secondary-top.jpg" alt="Maple bowl with turquoise inlay" />
+        <img src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/featured-secondary-bottom.jpg" alt="Maple bowl with turquoise inlay" />
       </FeaturedGallerySecondary>
     </FeaturedGallery>
     <Button color={smokeyBlack} onClick={() => {}}>

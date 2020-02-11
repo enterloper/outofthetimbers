@@ -104,7 +104,7 @@ const AboutPage = () => (
           <TitleSection />
           <PhotoSection>
             <img
-              src="assets/images/aboutOOTT.jpg"
+              src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/aboutOOTT.jpg"
               alt="Out of the Timbers founder Bob Boothe"
             />
           </PhotoSection>
@@ -127,13 +127,13 @@ const AboutPage = () => (
       <CollageContainer>
         <CollageFirstRow>
           <img
-            src="assets/images/missouriLumber.jpg" 
+            src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/missouriLumber.jpg" 
             alt="Jimmy Weldon with Lumber from Weldon Farm"
           />
         </CollageFirstRow>
         <CollageSecondRow>
           <img
-            src="assets/images/missouriLumber.jpg" 
+            src="https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/missouriLumber.jpg" 
             alt="Jimmy Weldon with Lumber from Weldon Farm"
           />
         </CollageSecondRow>
