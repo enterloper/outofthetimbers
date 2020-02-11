@@ -5,7 +5,7 @@ import ChevronButton from 'components/ChevronButton';
 
 const { alabaster } = colors;
 const JumboImage = styled.div`
-    background: url('/Users/weeknightdangerous/Desktop/outofthetimbers/src/assets/images/aboutOOTT.jpg') no-repeat center center fixed;
+    background: url('https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/home_banner.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
