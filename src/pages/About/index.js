@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavigationMenu from 'components/NavigationMenu';
 
 const Wrapper = styled.div`
   padding: 104px 24px 24px;
