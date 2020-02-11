@@ -18,7 +18,7 @@ body {
 }
 
 #no-script-wrapper {
-  background: url(../assets/images/home_banner.jpg) no-repeat center center fixed;
+  background: url(https://s3.us-east-2.amazonaws.com/outofthetimbers.com/images/home_banner.jpg) no-repeat center center fixed;
 ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
