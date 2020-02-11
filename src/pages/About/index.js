@@ -138,6 +138,7 @@ const AboutPage = () => (
           />
         </CollageSecondRow>
       </CollageContainer>
+      <h1>MORE ON THE WAY SOON</h1>
     </Wrapper>
   </>
 );
