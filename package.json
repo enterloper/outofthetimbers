@@ -7,10 +7,12 @@
     "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js",
     "deploy": "yarn run build && aws s3 cp dist/ s3://outofthetimbers.com --recursive",
     "build": "rimraf dist && webpack --env.production --optimize-minimize",
-    "dev": "webpack-dev-server --env.development --color --open --verbose --watch"
+    "dev": "webpack-dev-server --env.development --color --open --verbose --watch",
+    "test": "jest"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "enzyme": "^3.11.0",
     "jest": "^25.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
