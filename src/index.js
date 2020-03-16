@@ -8,6 +8,7 @@ import HomePage from './pages/Home';
 import StorePage from './pages/Store';
 import AboutPage from './pages/About';
 import NavigationMenu from './components/NavigationMenu';
+import Footer from './components/Footer';
 
 const App = () => (
   <>
@@ -18,6 +19,7 @@ const App = () => (
       <AboutPage path="about" />
       <ContactPage path="contact" />
     </Router>
+    <Footer />
   </>
 );
 render(<App />, document.getElementById('app'));

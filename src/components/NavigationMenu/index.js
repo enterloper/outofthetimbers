@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import colors from 'styles/colors';
 import useScrollPosition from 'utility/scrollPositionHook';
 
-const { alabaster, mustard, smokeyBlack } = colors;
+const { alabaster, laurelGreen, mustard, smokeyBlack, wintergreenDream } = colors;
 const Header = styled.header`
   width: 100%;
   min-width: 320px;
@@ -19,7 +19,6 @@ const Header = styled.header`
   &.isTransparent {
     background: none;
   }
-  &.
 `;
 
 const Container = styled.div`
@@ -36,17 +35,52 @@ const Container = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-size: 24px;
+  font-size: 32px;
   a {
+    font-family: 'Burford', 'Abril Fatface', sans-serif;
     text-decoration: none;
     cursor: pointer;
-    color: ${smokeyBlack};
+    color: ${alabaster};
     transition: color 500ms ease-in-out;
   }
-
-  &.isTransparent {
-    > a {
-      color: ${alabaster}
+  &.home {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${alabaster};
+      }
+    }
+  }
+  &.contact {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
+    }
+  }
+  &.store {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
+    }
+  }
+  &.about {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
     }
   }
 `;
@@ -67,11 +101,47 @@ const Navigation = styled.nav`
     height: 100%;
     transition: color 500ms ease-in-out;
   }
-  &.isTransparent {
-    > a {
-      color: ${alabaster}
+  &.home {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${alabaster};
+      }
     }
   }
+  &.contact {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
+    }
+  }
+  &.store {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
+    }
+  }
+  &.about {
+    a {
+      color: ${smokeyBlack};
+    }
+    &.isTransparent {
+      a {
+        color: ${laurelGreen};
+      }
+    }
+  }
+}
 `;
 
 const NavigationMenu = () => {
@@ -86,40 +156,26 @@ const NavigationMenu = () => {
     [isTransparent],
   );
   const colorMap = {
-    '/store': {
-      colorScheme: 'store',
-      fontColor: smokeyBlack,
-      background: 'rebeccapurple',
-    },
-    '/about': {
-      colorScheme: 'about',
-      fontColor: smokeyBlack,
-      background: 'rebeccapurple',
-    },
-    '/contact': {
-      colorScheme: 'contact',
-      fontColor: smokeyBlack,
-      background: 'rebeccapurple',
-    },
+    '/store': 'store',
+    '/about': 'about',
+    '/contact': 'contact',
   };
 
   return (
     <Location>
       {({ location: { pathname } }) => {
         let className = '';
-        if (colorMap[pathname]) {
-          className = colorMap[pathname].colorScheme;
-        }
-        console.log('CLASS:', className);
+        className = colorMap[pathname] ? colorMap[pathname] : 'home';
+
         return (
           <Header className={`${isTransparent ? 'isTransparent' : ''} ${className}`}>
             <Container>
-              <Logo className={isTransparent ? 'isTransparent' : ''}>
+              <Logo className={`${isTransparent ? 'isTransparent' : ''} ${className}`}>
                 <Link to="/">
                   OUT OF THE TIMBERS
                 </Link>
               </Logo>
-              <Navigation className={isTransparent ? 'isTransparent' : ''}>
+              <Navigation className={`${isTransparent ? 'isTransparent' : ''} ${className}`}>
                 <Link to="store">Store</Link>
                 <Link to="about">About</Link>
                 <Link to="contact">Contact</Link>
